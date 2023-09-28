@@ -138,6 +138,7 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
    'AUTH_HEADER_TYPES': ('JWT',),
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=2)
 }
 
 # DJOSER = {
@@ -145,7 +146,3 @@ SIMPLE_JWT = {
 #         'user_create': 'videoupload.serializers.UserCreateSerializer'
 #     }
 # }
-
-SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(days=2)
-}
