@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from rest_framework.generics import ListCreateAPIView
+from . models import Video
+from . serializers import VideoSerializer
 
-# Create your views here.
+
+class ListCreateVideoView(ListCreateAPIView):
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
