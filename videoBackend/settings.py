@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'djoser',
     'videoupload',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -162,3 +164,9 @@ SIMPLE_JWT = {
 #         'user_create': 'videoupload.serializers.UserCreateSerializer'
 #     }
 # }
+
+#Django CorsHeaders config
+
+CORS_ALLOWED_ORIGINS = [
+    ##FRONTEND URL TO BE KEPT HERE
+]

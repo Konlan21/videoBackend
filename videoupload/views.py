@@ -7,12 +7,12 @@ from rest_framework.permissions import IsAuthenticated
 class ListCreateVideoView(ListCreateAPIView):
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         # Filter videos by the currently authenticated user
-        return Video.objects.filter(user=self.request.user)
+        return Video.objects.all()
     
     def perform_create(self, serializer):
         # Automatically set the user field to the currently authenticated user
-        serializer.save(user=self.request.user)
+        serializer.save()
