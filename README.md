@@ -1,6 +1,6 @@
 # Django Video API for Chrome Extension
 
-This Django-based API allows you to post and retrieve a list of videos for use in a Chrome extension. You can use this API to manage your video data and integrate it into your extension.
+This Django-based API allows you to post and retrieve a list of videos for use in a Chrome extension. It allows you to upload videos in smaller chunks and then concat them to post to this backend.
 
 ## Requirements
 - Python 3.8 or greater
@@ -14,7 +14,7 @@ This Django-based API allows you to post and retrieve a list of videos for use i
   
 
 ## Features
-- Create, Read operations for videos.
+- Create, Read operations for videos in smaller chunks.
 - Secure authentication to protect your data.
 - Easy integration with your Chrome extension.
 
